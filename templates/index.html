@@ -1,96 +1,116 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小學三年級B班介紹</title>
+    <title>讀書計畫</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: "Noto Sans TC", sans-serif;
+            background: linear-gradient(to right, #e1f5fe, #f1f8e9);
             color: #333;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        h1 {
             margin: 0;
-        }
-        section {
-            margin: 20px;
-        }
-        .teacher, .students, .activities {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        ul {
-            list-style-type: none;
             padding: 0;
         }
-        li {
-            margin: 5px 0;
+
+        header {
+            background-color: #2196f3;
+            color: white;
+            text-align: center;
+            padding: 50px 20px 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            opacity: 0.95;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 25px 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #2e7d32;
+            font-weight: 700;
+            font-size: 1.1em;
+            display: block;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .card:hover a {
+            color: #1b5e20;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .card a {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>歡迎來到小學三年級B班</h1>
-        <p>這是我們的小天地，歡迎認識我們！</p>
+        <h1>我的讀書計畫</h1>
+        <p>新北高中 30936 陳怡臻</p>
     </header>
-    <section>
-        <div class="teacher">
-            <h2>班導師</h2>
-            <p><strong>李美芳老師</strong> 是我們班的導師，她非常有耐心，喜歡用遊戲的方式讓我們學習新知識。</p>
-        </div>
-    </section>
-    <section>
-        <div class="students">
-            <h2>學生名單</h2>
-            <ul>
-                <li>王小明</li>
-                <li>陳小華</li>
-                <li>林怡君</li>
-                <li>張志強</li>
-                <li>黃淑芬</li>
-            </ul>
-        </div>
-    </section>
-    <section>
-        <div class="activities">
-            <h2>我們喜歡的活動</h2>
-            <p>在這裡，小朋友們有各自喜愛的活動：</p>
-            <ul>
-                <li><strong>王小明</strong> 喜歡踢足球</li>
-                <li><strong>陳小華</strong> 喜歡畫畫</li>
-                <li><strong>林怡君</strong> 喜歡唱歌</li>
-                <li><strong>張志強</strong> 喜歡打籃球</li>
-                <li><strong>黃淑芬</strong> 喜歡看書</li>
-            </ul>
-        </div>
-    </section>
-    <section>
-        <div class="contact">
-            <h2>聯絡我們</h2>
-            <p>如果你有任何問題，歡迎與我們聯絡：</p>
-            <p>Email: <a href="mailto:teacher.lim@example.com">teacher.lim@example.com</a></p>
-        </div>
-    </section>
-    <section>
-        <div class="quiz-link">
-            <h2>參加我們的測驗</h2>
-            <p>想試試你的知識嗎？<a href="/quiz">點擊這裡參加測驗</a>！</p>
-        </div>
-    </section>
-    <section>
-        <div class="ask-link">
-            <h2>提問</h2>
-            <p>有問題嗎？<a href="/ask">點擊這裡提問</a>！</p>
-        </div>
-    </section>
+
+    <main>
+        <div class="card"><a href="/competition">🏆 競賽經驗</a></div>
+        <div class="card"><a href="/activities">🎭 課外活動</a></div>
+        <div class="card"><a href="/leadership">👑 幹部經驗</a></div>
+        <div class="card"><a href="/club">🎯 社團經驗</a></div>
+        <div class="card"><a href="/electives">📚 多元選修課程</a></div>
+        <div class="card"><a href="/ai">🤖 AI 應用</a></div>
+    </main>
+
+    <footer>
+        &copy; 2025 新北高中 30905 李偉博 — All rights reserved.
+    </footer>
 </body>
 </html>
+
+
